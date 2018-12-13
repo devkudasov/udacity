@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         displayQuantity();
-        displayPrice();
     }
 
     /**
@@ -62,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayPrice() {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(this.quantity * 5));
+
+        String price = NumberFormat.getCurrencyInstance().format(this.quantity * 5);
+        String resultString = String.format("Total: %s\nThank you!", price);
+
+        priceTextView.setText(resultString);
+    }
+
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
