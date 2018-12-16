@@ -35,14 +35,21 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice();
+        int price = calculatePrice();
+        displayMessage(createOrderSummary(price));
     }
 
+    /**
+     * This method called when the plus button is clicked
+     */
     public void increment(View view) {
         this.quantity++;
         displayQuantity();
     }
 
+    /**
+     * This method called when the minus button is clicked
+     */
     public void decrement(View view) {
         this.quantity--;
         displayQuantity();
@@ -52,24 +59,34 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the given quantity value on the screen.
      */
     private void displayQuantity() {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        TextView quantityTextView = findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + this.quantity);
     }
 
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice() {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-
-        String price = NumberFormat.getCurrencyInstance().format(this.quantity * 5);
-        String resultString = String.format("Total: %s\nThank you!", price);
-
-        priceTextView.setText(resultString);
+    private String createOrderSummary(int price) {
+        String priceString = NumberFormat.getCurrencyInstance().format(price);
+        return String.format("Name: Dima\nQuantity: %s\nTotal: %s\nThank you!", quantity, priceString);
     }
 
+    /**
+     * This method display string parameter
+     *
+     * @param message that should be displayed
+     */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
+    }
+
+    /**
+     * This method calculate price of order
+     *
+     * @return int price of order
+     */
+    private int calculatePrice() {
+        return quantity * 5;
     }
 }
