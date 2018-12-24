@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Просто кофе</string>
+    <string name="hint_name">Имя</string>
+    <string name="label_toppings">Добавки</string>
+    <string name="label_quantity">Количество</string>
+    <string name="checkbox_whipped_cream">Взбитые сливки</string>
+    <string name="checkbox_chocolate">Шоколад</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_order">Заказ</string>
+    <string name="is_max_quantity">Вы не можете заказать больше 100 чашек кофе</string>
+    <string name="is_min_quantity">Вы не можете заказать меньше 1 чашки кофе</string>
+    <string name="is_whipped_cream_added">Добавить взбитые сливки? <xliff id="whipped_cream" example="true">%b</xliff></string>
+    <string name="is_chocolate_added">Добавить шоколад? <xliff id="chocolate" example="true">%b</xliff></string>
+    <string name="total_quantity">Количество: <xliff id="total_quantity" example="5">%d</xliff></string>
+    <string name="total_price">Итого: <xliff id="total_price" example="$50">%s</xliff></string>
+    <string name="thank_you">Спасибо!</string>
+    <string name="entered_name">Имя: <xliff id="name" example="Dima">%s</xliff></string>
+</resources>
