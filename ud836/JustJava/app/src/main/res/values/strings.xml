@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Just Java</string>
+    <string name="hint_name">Name</string>
+
+    <string name="label_toppings">Toppings</string>
+    <string name="label_quantity">Quantity</string>
+
+    <string name="checkbox_whipped_cream">Whipped cream</string>
+    <string name="checkbox_chocolate">Chocolate</string>
+
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_order">Order</string>
+
+    <string name="is_max_quantity">You can\'t have more than 100 cups of coffee</string>
+    <string name="is_min_quantity">You can\'t have less than 1 cup of coffee</string>
+
+    <string name="entered_name">Name: <xliff id="name" example="Dima">%s</xliff></string>
+    <string name="is_whipped_cream_added">Add whipped cream? <xliff id="whipped_cream" example="true">%b</xliff></string>
+    <string name="is_chocolate_added">Add chocolate? <xliff id="chocolate" example="true">%b</xliff></string>
+    <string name="total_quantity">Quantity: <xliff id="total_quantity" example="5">%d</xliff></string>
+    <string name="total_price">Total: <xliff id="total_price" example="$50">%s</xliff></string>
+    <string name="thank_you">Thank you!</string>
 </resources>

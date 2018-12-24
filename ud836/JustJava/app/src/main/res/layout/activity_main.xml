@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,15 +7,36 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name"
+        android:inputType="textCapWords"/>
+
     <TextView
+        style="@style/HeaderTextStyle"
+        android:text="@string/label_toppings" />
+
+    <CheckBox
+        android:id="@+id/whipped_cream_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingLeft="24dp"
+        android:textSize="16sp"
+        android:text="@string/checkbox_whipped_cream"/>
+
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:textSize="16sp"
+        android:text="@string/checkbox_chocolate"/>
+
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:text="@string/label_quantity" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,47 +47,30 @@
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="-"
-            android:onClick="decrement"/>
+            android:onClick="decrement"
+            android:text="@string/button_minus" />
+
         <TextView
             android:id="@+id/quantity_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:textSize="16sp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="+"
-            android:onClick="increment"/>
+            android:onClick="increment"
+            android:text="@string/button_plus" />
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order Summary"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/order_summary_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order"
-        android:onClick="submitOrder"/>
+        android:onClick="submitOrder"
+        android:text="@string/button_order" />
 
 </LinearLayout>
